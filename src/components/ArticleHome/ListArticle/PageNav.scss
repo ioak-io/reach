@@ -1,0 +1,33 @@
+.page-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.page-nav__button {
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid var(--reach-backgroundcolor-2);
+  box-shadow: none;
+  height: 30px;
+  width: 30px;
+  margin: 4px;
+  outline: none;
+  transition: background-color 250ms ease-in-out;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    outline: none;
+  }
+  &:hover {
+    background-color: var(--reach-backgroundcolor-2);
+    color: var(--reach-foregroundcolor-2);
+    border: 1px solid var(--reach-backgroundcolor-2);
+  }
+}
+.page-nav__button--active {
+  background-color: var(--reach-backgroundcolor-3);
+  color: var(--reach-foregroundcolor-1);
+  border: 1px solid var(--reach-backgroundcolor-3);
+}

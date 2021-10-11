@@ -1,0 +1,20 @@
+.widget-group-section {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  &.widget-group-section--orientation-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  &.widget-group-section--orientation-one-column {
+    grid-template-columns: 1fr;
+  }
+  &.widget-group-section--orientation-two-column {
+    grid-template-columns: 1fr 1fr;
+  }
+  &.widget-group-section--orientation-three-column {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &.widget-group-section--orientation-four-column {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

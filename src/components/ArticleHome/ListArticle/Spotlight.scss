@@ -1,0 +1,15 @@
+.spotlight {
+  display: inherit;
+}
+.spotlight-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  @media (min-width: 767px) {
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: 0.25fr 0.5fr 0.25fr;
+  }
+}

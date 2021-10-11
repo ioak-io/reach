@@ -1,0 +1,30 @@
+.tag {
+  margin: 0px 6px 6px 0;
+}
+.tag__content {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 8px;
+  padding: var(--reach-tag-padding);
+  // border-radius: 50px;
+  border-radius: var(--reach-tag-borderradius);
+  background-color: var(--reach-tag-backgroundcolor);
+  color: var(--reach-tag-foregroundcolor);
+  cursor: pointer;
+  transition: border-color 250ms ease-in-out, background-color 250ms ease-in-out,
+    color 250ms ease-in-out;
+  &:hover {
+    // border-color: var(--reach-foregroundcolor-1);
+    background-color: var(--reach-tag-backgroundcolor-hover);
+    color: var(--reach-tag-foregroundcolor-hover);
+  }
+}
+
+.tag__content__icon {
+  display: grid;
+  font-size: 10px;
+  align-items: center;
+  svg {
+    transform: rotate(90deg);
+  }
+}
