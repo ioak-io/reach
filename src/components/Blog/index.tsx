@@ -24,7 +24,7 @@ export interface BlogProps {
   children?: any;
 }
 
-const ReachBlog = (props: BlogProps) => {
+const Blog = (props: BlogProps) => {
   // const location = useLocation();
   // const history = useHistory();
   // const [type, setType] = useState<'home' | 'view' | 'edit'>('home');
@@ -179,4 +179,4 @@ const ReachBlog = (props: BlogProps) => {
   );
 };
 
-export default ReachBlog;
+export default Blog;
