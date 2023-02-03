@@ -9,8 +9,6 @@ const BlogWrapper = (props: BlogProps) => {
   return (
     <Blog {...props}>
       <WidgetGroup orientation={OrientationType.row}>
-        <div>One</div>
-        <div>two</div>
         <ArticleListWidget articles={articles} />
       </WidgetGroup>
       </Blog>
