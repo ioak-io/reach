@@ -25,8 +25,8 @@ const ThumbnailLink = (props: Props) => {
           className={`thumbnail-link__image thumbnail-link__image--height-${props.meta.imageHeight}`}
         >
           <img
-            src={imageUrl.data.raw.urls.regular}
-            alt={imageUrl.data.raw.alt_description}
+            src={imageUrl}
+            alt={"imageUrl.data.raw.alt_description"}
           />
         </div>
       )}

@@ -25,8 +25,8 @@ const BulletinLink = (props: Props) => {
           className={`bulletin-link__image bulletin-link__image--height-${props.meta.imageHeight}`}
         >
           <img
-            src={imageUrl.data.raw.urls.regular}
-            alt={imageUrl.data.raw.alt_description}
+            src={imageUrl}
+            alt={"imageUrl.data.raw.alt_description"}
           />
         </div>
       )}

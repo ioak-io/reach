@@ -30,8 +30,8 @@ const ArticleLink = (props: Props) => {
             }`}
         >
           <img
-            src={imageUrl.data.raw.urls.regular}
-            alt={imageUrl.data.raw.alt_description}
+            src={imageUrl}
+            alt={"imageUrl.data.raw.alt_description"}
           />
         </div>
       )}
