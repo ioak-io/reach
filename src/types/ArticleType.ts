@@ -3,8 +3,8 @@ import { ArticleTag } from './ArticleTag';
 
 export type Article = {
   id: string;
-  title: any[];
-  description: any[];
+  title: string;
+  description: string;
   views: number;
   helpful: number;
   notHelpful: number;

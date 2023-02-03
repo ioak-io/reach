@@ -4,6 +4,7 @@ import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
 import Blog, { BlogProps } from ".";
 import ThemeType from "../types/ThemeType";
+import BlogWrapper from "./BlogWrapper";
 
 export default {
   title: "Components/Blog",
@@ -14,10 +15,10 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the Blog component
-const Template: Story<BlogProps> = (args: BlogProps) => <Blog {...args} />;
+const Template: Story<BlogProps> = (args: BlogProps) => <BlogWrapper {...args} />;
 
 // Reuse that template for creating different stories
 export const DefaultBlog = Template.bind({});
 DefaultBlog.args = {
-  categories: []
+  
 };

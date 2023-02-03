@@ -1,0 +1,19 @@
+.spotlight {
+  display: inherit;
+}
+.spotlight-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+@media (min-width: 767px) {
+  .spotlight-container {
+    grid-template-columns: 0.5fr 0.5fr;
+ }
+}
+@media (min-width: 1000px) {
+  .spotlight-container {
+    grid-template-columns: 0.25fr 0.5fr 0.25fr;
+ }
+}
