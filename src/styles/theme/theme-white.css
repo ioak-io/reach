@@ -1,0 +1,12 @@
+* {
+    --theme-white-900: #6c6c6c;
+    --theme-white-800: #7c7c7c;
+    --theme-white-700: #8c8c8c;
+    --theme-white-600: #9c9c9c;
+    --theme-white-500: #acacac;
+    --theme-white-400: #bcbcbc;
+    --theme-white-300: #cccccc;
+    --theme-white-200: #dcdcdc;
+    --theme-white-100: #ececec;
+    --theme-white-50: #fcfcfc;
+}

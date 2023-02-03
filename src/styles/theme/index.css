@@ -1,0 +1,10 @@
+@import './theme-black.css';
+@import './theme-white.css';
+
+.reach-light {
+    color: var(--theme-black-900);
+}
+
+.reach-dark {
+    color: var(--theme-white-50);
+}
