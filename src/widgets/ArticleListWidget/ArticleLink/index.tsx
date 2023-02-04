@@ -4,11 +4,12 @@ import { Article } from '../../../types/ArticleType';
 import ArticleMeta from '../ArticleMeta';
 import { ArticleCategory } from '../../../types/ArticleCategoryType';
 import { ReachArticleListMeta } from '../../../types/ReachArticleListMetaType';
+import { getCategoryName } from '../../../utils/ArticleUtils';
 
 interface Props {
   article: Article;
+  categoryMap: any;
   hideImage?: boolean;
-  category?: ArticleCategory;
   meta?: ReachArticleListMeta;
   viewArticleBaseUrl?: string;
   onArticleClick?: any;
@@ -38,11 +39,11 @@ const ArticleLink = (props: Props) => {
         </div>
       )}
       <div className="article-link">
-        {props.category && (
+        {getCategoryName(props.article, props.categoryMap) && (
           <div
             className=""
           >
-            {props.category.name}
+            {getCategoryName(props.article, props.categoryMap)}
           </div>
         )}
         <h3 className="article-link__title">

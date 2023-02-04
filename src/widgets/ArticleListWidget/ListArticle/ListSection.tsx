@@ -28,9 +28,7 @@ const ListSection = (props: Props) => {
               key={item.id}
               hideImage={props.hideImage}
               article={item}
-              category={
-                item.categoryId ? props.categoryMap[item.categoryId] : null
-              }
+              categoryMap={props.categoryMap}
               meta={props.meta}
               viewArticleBaseUrl={props.viewArticleBaseUrl}
               onArticleClick={props.onArticleClick}

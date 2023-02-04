@@ -11,6 +11,7 @@ export type Article = {
   createdAt?: string;
   updatedAt?: string;
   categoryId?: string;
+  categoryName?: string;
   //   feedback?: Maybe<Array<Maybe<ArticleFeedback>>>;
   tags?: ArticleTag[];
 };

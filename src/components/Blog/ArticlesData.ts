@@ -29,7 +29,8 @@ export const articles: Article[] = [
         id: "4",
         helpful: 1,
         notHelpful: 0,
-        views: 10,
+        views: 24,
+        categoryName: "Lorem ipsum",
         title: "molestie pulvinarin dui auctor dapibus ac et nisi cursus vivamus mollis porta lacinia",
         description: "vivamus lorem rutrumaliquam felis faucibus porttitor lobortis dapibus duis pulvinarin venenatis porttitor risus massa. etiam donec tristique proin suscipit praesent a sit erat himenaeos integer. interdum rutrumaliquam sapien mauris tristique elitsuspendisse tempus vitae gravida blandit musvestibulum vitae. nascetur consequat rutrum euismod nunc inceptos massa turpis pellentesque molestie ullamcorper dolor. himenaeos blandit quisque scelerisque dis tortor sed blandit donec donec turpis commodo luctus turpis. eget enim consectetur purus fusce accumsan rutrum tristique adipiscing eleifend etiam sem musvestibulum. ullamcorper quisque odio leo varius consectetur vestibulum in consectetur placerat morbi praesent pulvinarin. magnis taciti nunc vel felis parturient ipsum lacinia eu nisi. per posuere odio lobortis sapien justo turpis pulvinarin porttitor tortor tellus elitsuspendisse elitsuspendisse suscipit. integer ultricies class natoque maecenas rutrum praesent dictumst interdum nascetur. nostra fermentum mauris luctus faucibus curae lobortis egestas ex a feugiat platea. tortor pulvinar habitasse auctor inceptos euismod eget imperdiet pulvinarin magnis a. ipsum etiam mauris tristique risus ipsum vestibulum cras. cursus luctus turpis magna enim maecenas scelerisque tincidunt in laoreet tempus etiam. leo ultricies nostra pharetra parturient cursus laoreet purus placerat",
     }
