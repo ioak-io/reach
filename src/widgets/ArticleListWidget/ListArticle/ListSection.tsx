@@ -10,6 +10,8 @@ interface Props {
   hideImage?: boolean;
   articles?: any[];
   categoryMap: any;
+  viewArticleBaseUrl?: string;
+  onArticleClick?: any;
 }
 
 const ListSection = (props: Props) => {
@@ -30,6 +32,8 @@ const ListSection = (props: Props) => {
                 item.categoryId ? props.categoryMap[item.categoryId] : null
               }
               meta={props.meta}
+              viewArticleBaseUrl={props.viewArticleBaseUrl}
+              onArticleClick={props.onArticleClick}
             />
           ))}
         </div>

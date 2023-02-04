@@ -9,7 +9,7 @@ const BlogWrapper = (props: BlogProps) => {
   return (
     <Blog {...props}>
       <WidgetGroup orientation={OrientationType.row}>
-        <ArticleListWidget articles={articles} />
+        <ArticleListWidget articles={articles} meta={{variant: 'list'}} viewArticleBaseUrl="/#/article/" />
       </WidgetGroup>
       </Blog>
   );

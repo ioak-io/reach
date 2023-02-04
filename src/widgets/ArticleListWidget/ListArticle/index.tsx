@@ -8,51 +8,64 @@ import Thumbnail from './Thumbnail';
 import { ReachArticleListMeta } from '../../../types/ReachArticleListMetaType';
 import Bulletin from './Bulletin';
 import { Article } from '../../../types/ArticleType';
+import ArticleListVariantType from '../../../types/ArticleListVariantType';
 
 interface Props {
-  // variant?: 'list' | 'thumbnail' | 'spotlight' | 'text';
+  variant?: ArticleListVariantType;
   meta?: ReachArticleListMeta;
   articles: Article[];
   categoryMap?: any;
+  viewArticleBaseUrl?: string;
+  onArticleClick?: any;
 }
 
 const ListArticle = (props: Props) => {
   return (
     <div className="react-list-article">
-      {(!props.meta?.variant || props.meta?.variant === 'list') && (
+      {(!props.variant || props.variant === ArticleListVariantType.list) && (
         <ListSection
           articles={props.articles}
           categoryMap={props.categoryMap}
           meta={props.meta}
+          viewArticleBaseUrl={props.viewArticleBaseUrl}
+          onArticleClick={props.onArticleClick}
         />
       )}
-      {props.meta?.variant === 'text' && (
+      {props.variant === ArticleListVariantType.text && (
         <ListSection
           hideImage
           articles={props.articles}
           categoryMap={props.categoryMap}
           meta={props.meta}
+          viewArticleBaseUrl={props.viewArticleBaseUrl}
+          onArticleClick={props.onArticleClick}
         />
       )}
-      {props.meta?.variant === 'spotlight' && (
+      {props.variant === ArticleListVariantType.spotlight && (
         <Spotlight
           meta={props.meta}
           articles={props.articles}
           categoryMap={props.categoryMap}
+          viewArticleBaseUrl={props.viewArticleBaseUrl}
+          onArticleClick={props.onArticleClick}
         />
       )}
-      {props.meta?.variant === 'thumbnail' && (
+      {props.variant === ArticleListVariantType.thumbnail && (
         <Thumbnail
           articles={props.articles}
           meta={props.meta}
           categoryMap={props.categoryMap}
+          viewArticleBaseUrl={props.viewArticleBaseUrl}
+          onArticleClick={props.onArticleClick}
         />
       )}
-      {props.meta?.variant === 'bulletin' && (
+      {props.variant === ArticleListVariantType.bulletin && (
         <Bulletin
           articles={props.articles}
           meta={props.meta}
           categoryMap={props.categoryMap}
+          viewArticleBaseUrl={props.viewArticleBaseUrl}
+          onArticleClick={props.onArticleClick}
         />
       )}
     </div>

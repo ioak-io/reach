@@ -9,7 +9,9 @@ import { ReachArticleListMeta } from '../../../types/ReachArticleListMetaType';
 interface Props {
   articles?: any[];
   categoryMap: any;
-  meta: ReachArticleListMeta;
+  meta?: ReachArticleListMeta;
+  viewArticleBaseUrl?: string;
+  onArticleClick?: any;
 }
 
 const Bulletin = (props: Props) => {

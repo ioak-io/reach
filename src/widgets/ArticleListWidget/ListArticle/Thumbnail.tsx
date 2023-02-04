@@ -9,7 +9,9 @@ import { ReachArticleListMeta } from '../../../types/ReachArticleListMetaType';
 interface Props {
   articles?: any[];
   categoryMap: any;
-  meta: ReachArticleListMeta;
+  meta?: ReachArticleListMeta;
+  viewArticleBaseUrl?: string;
+  onArticleClick?: any;
 }
 
 const Thumbnail = (props: Props) => {
@@ -27,6 +29,8 @@ const Thumbnail = (props: Props) => {
               item.categoryId ? props.categoryMap[item.categoryId] : null
             }
             meta={props.meta}
+            viewArticleBaseUrl={props.viewArticleBaseUrl}
+            onArticleClick={props.onArticleClick}
           />
         ))}
       </div>

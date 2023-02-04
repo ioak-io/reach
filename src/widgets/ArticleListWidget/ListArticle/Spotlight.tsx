@@ -10,6 +10,8 @@ interface Props {
   articles?: any[];
   categoryMap: any;
   meta?: ReachArticleListMeta;
+  viewArticleBaseUrl?: string;
+  onArticleClick?: any;
 }
 
 const Spotlight = (props: Props) => {
@@ -27,6 +29,8 @@ const Spotlight = (props: Props) => {
             category={
               item.categoryId ? props.categoryMap[item.categoryId] : null
             }
+            viewArticleBaseUrl={props.viewArticleBaseUrl}
+            onArticleClick={props.onArticleClick}
           />
         ))}
       </div>
