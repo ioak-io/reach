@@ -41,9 +41,9 @@
 }
 .thumbnail-link__text__title__a {
   color: var(--reach-foregroundcolor-2);
-  font-size: 22px;
-  line-height: 1.3;
-  font-weight: 600;
+  font-size: var(--reach-article-link-thumbnail-title-font-size);
+  font-weight: var(--reach-article-link-thumbnail-title-font-weight);
+  line-height: var(--reach-article-link-thumbnail-title-line-height);
   transition: color 250ms ease-in-out;
 }
 .thumbnail-link__text__title__a:hover, .thumbnail-link__text__title__a:active, .thumbnail-link__text__title__a:focus {
@@ -53,4 +53,10 @@
   color: var(--reach-foregroundcolor-1);
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.thumbnail-link__text__description {
+  font-size: var(--reach-article-link-thumbnail-summary-font-size);
+  font-weight: var(--reach-article-link-thumbnail-summary-font-weight);
+  line-height: var(--reach-article-link-thumbnail-summary-line-height);
 }

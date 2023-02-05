@@ -63,14 +63,15 @@
 }
 
 .spotlight-link__description {
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
+  font-size: var(--reach-article-link-spotlight-title-font-size);
+  font-weight: var(--reach-article-link-spotlight-title-font-weight);
+  line-height: var(--reach-article-link-spotlight-title-line-height);
+  color: var(--theme-white-50);
 }
 
 .spotlight-link__description a {
   text-decoration: none;
-  color: #fff;
+  color: var(--theme-white-100);
 }
 
 .spotlight-link__category {
