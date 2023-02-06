@@ -9,6 +9,7 @@ import { ReachArticleListMeta } from '../../../types/ReachArticleListMetaType';
 import Bulletin from './Bulletin';
 import { Article } from '../../../types/ArticleType';
 import ArticleListVariantType from '../../../types/ArticleListVariantType';
+import BasicList from '../BasicList';
 
 interface Props {
   variant?: ArticleListVariantType;
@@ -23,20 +24,18 @@ const ListArticle = (props: Props) => {
   return (
     <div className="react-list-article">
       {(!props.variant || props.variant === ArticleListVariantType.list) && (
-        <ListSection
+        <BasicList
           articles={props.articles}
           categoryMap={props.categoryMap}
-          meta={props.meta}
           viewArticleBaseUrl={props.viewArticleBaseUrl}
           onArticleClick={props.onArticleClick}
         />
       )}
       {props.variant === ArticleListVariantType.text && (
-        <ListSection
-          hideImage
+        <BasicList
           articles={props.articles}
           categoryMap={props.categoryMap}
-          meta={props.meta}
+          hideImage
           viewArticleBaseUrl={props.viewArticleBaseUrl}
           onArticleClick={props.onArticleClick}
         />
