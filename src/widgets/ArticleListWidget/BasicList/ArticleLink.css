@@ -75,9 +75,9 @@
 
 .reach-basic-list-article-link__main__title__a {
   color: var(--reach-foregroundcolor-2);
-  font-size: var(--reach-article-link-list-title-font-size);
-  line-height: var(--reach-article-link-list-title-line-height);
-  font-weight: var(--reach-article-link-list-title-font-weight);
+  font-size: var(--reach-article-list-title-font-size);
+  line-height: var(--reach-article-list-title-line-height);
+  font-weight: var(--reach-article-list-title-font-weight);
   transition: color 250ms ease-in-out;
 }
 
@@ -91,9 +91,9 @@
   color: var(--reach-foregroundcolor-1);
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: var(--reach-article-link-list-summary-font-size);
-  font-weight: var(--reach-article-link-list-summary-font-weight);
-  line-height: var(--reach-article-link-list-summary-line-height);
+  font-size: var(--reach-article-list-summary-font-size);
+  font-weight: var(--reach-article-list-summary-font-weight);
+  line-height: var(--reach-article-list-summary-line-height);
 }
 
 .reach-basic-list-article-link__main__more {
@@ -108,7 +108,7 @@
   justify-content: flex-start;
   column-gap: 6px;
   margin-bottom: 10px;
-  color: var(--reach-foregroundcolor-1);
+  color: inherit;
   font-size: 12px;
   line-height: 1.7;
   font-weight: 400;
@@ -118,9 +118,12 @@
 .reach-basic-list-article-link__main__more__a:hover,
 .reach-basic-list-article-link__main__more__a:active,
 .reach-basic-list-article-link__main__more__a:focus {
-  color: var(--reach-color-primary);
+  color: #dea112;
 }
 
 .reach-basic-list-article-link__main__category {
-  color: var(--reach-color-secondary);
+  color: #dea112;
+  font-size: var(--reach-article-list-category-font-size);
+  font-weight: var(--reach-article-list-category-font-weight);
+  line-height: var(--reach-article-list-category-line-height);
 }

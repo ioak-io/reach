@@ -1,0 +1,11 @@
+.reach-basic-list {
+    --reach-article-list-title-font-size: 24px;
+    --reach-article-list-title-font-weight: 600;
+    --reach-article-list-title-line-height: 1.5;
+    --reach-article-list-summary-font-size: 14px;
+    --reach-article-list-summary-font-weight: 400;
+    --reach-article-list-summary-line-height: 1.5;
+    --reach-article-list-category-font-size: 12px;
+    --reach-article-list-category-font-weight: 600;
+    --reach-article-list-category-line-height: 1.5;
+}
