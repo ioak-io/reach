@@ -106,7 +106,7 @@
 .article-link__title__a {
   color: var(--reach-foregroundcolor-2);
   font-size: var(--reach-article-list-title-font-size);
-  line-height: var(--reach-article-list-title-line-height);
+  line-height: var(--reach-article-list-title-font-line-height);
   font-weight: var(--reach-article-list-title-font-weight);
   transition: color 250ms ease-in-out;
 }
@@ -121,9 +121,9 @@
   color: var(--reach-foregroundcolor-1);
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: var(--reach-article-list-summary-font-size);
-  font-weight: var(--reach-article-list-summary-font-weight);
-  line-height: var(--reach-article-list-summary-line-height);
+  font-size: var(--reach-article-list-summary-font-font-size);
+  font-weight: var(--reach-article-list-summary-font-font-weight);
+  line-height: var(--reach-article-list-summary-font-line-height);
 }
 
 .article-link__more {
