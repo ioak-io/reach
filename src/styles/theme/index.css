@@ -1,5 +1,6 @@
 @import './theme-black.css';
 @import './theme-white.css';
+@import './theme-primary.css';
 
 .reach-light {
     color: var(--theme-black-900);

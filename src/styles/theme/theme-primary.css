@@ -1,0 +1,12 @@
+* {
+    --theme-primary-900: #6c6c6c;
+    --theme-primary-800: #7c7c7c;
+    --theme-primary-700: #8c8c8c;
+    --theme-primary-600: #1d86dc;
+    --theme-primary-500: #acacac;
+    --theme-primary-400: #bcbcbc;
+    --theme-primary-300: #cccccc;
+    --theme-primary-200: #dcdcdc;
+    --theme-primary-100: #ececec;
+    --theme-primary-50: #fcfcfc;
+}
