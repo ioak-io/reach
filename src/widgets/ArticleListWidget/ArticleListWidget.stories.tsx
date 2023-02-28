@@ -3,8 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
 import ArticleListWidget, { ArticleListWidgetProps } from ".";
-import ArticleListWidgetWrapper from "./ArticleListWidgetWrapper";
-import ArticleListVariantType from "../../types/ArticleListVariantType";
+import { articles } from "../../components/Blog/ArticlesData";
 
 export default {
   title: "Components/widgets/ArticleListWidget",
@@ -15,12 +14,12 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the ArticleListWidget component
-const Template: Story<ArticleListWidgetProps> = (args: ArticleListWidgetProps) => <ArticleListWidgetWrapper {...args} />;
+const Template: Story<ArticleListWidgetProps> = (args: ArticleListWidgetProps) => <ArticleListWidget {...args} />;
 
 // Reuse that template for creating different stories
 export const DefaultArticleListWidget = Template.bind({});
 DefaultArticleListWidget.args = {
-  variant: ArticleListVariantType.spotlight,
-  meta: {
-  }
+  articles: articles,
+  hideImage: false,
+  viewArticleBaseUrl: "#/"
 };

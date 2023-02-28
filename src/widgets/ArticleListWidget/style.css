@@ -1,10 +1,5 @@
-.reach-widget-group {
+.reach-article-list-widget {
   display: grid;
-  column-gap: 30px;
-  row-gap: 30px;
   grid-auto-flow: row;
-}
-
-.reach-widget-group--orientation-row {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 20px;
 }

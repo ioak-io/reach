@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import { Article } from '../../../types/ArticleType';
 import ArticleMeta from '../ArticleMeta';
+import { ArticleCategory } from '../../../types/ArticleCategoryType';
+import { ReachArticleListMeta } from '../../../types/ReachArticleListMetaType';
 import { getCategoryName } from '../../../utils/ArticleUtils';
 
 interface Props {
   article: Article;
   categoryMap: any;
   hideImage?: boolean;
+  meta?: ReachArticleListMeta;
   viewArticleBaseUrl?: string;
   onArticleClick?: any;
 }
@@ -20,34 +23,40 @@ const ArticleLink = (props: Props) => {
   }, [props.article]);
 
   return (
-    <div className="reach-article-list-widget-article-link">
+    <div
+      className={`article-link__root ${props.meta?.materialize ? 'article-link__root--materialize' : ''
+        }`}
+    >
       {!props.hideImage && imageUrl && (
         <div
-          className="reach-article-list-widget-article-link__image">
+          className={`article-link__image article-link__image--height-${props.meta?.imageHeight || 'large'
+            }`}
+        >
           <img
             src={imageUrl}
             alt={"imageUrl.data.raw.alt_description"}
           />
         </div>
       )}
-      <div className="reach-article-list-widget-article-link__main">
+      <div className="article-link">
         {getCategoryName(props.article, props.categoryMap) && (
           <div
-            className="reach-article-list-widget-article-link__main__category"
+            className=""
           >
             {getCategoryName(props.article, props.categoryMap)}
           </div>
         )}
-        <h3 className="reach-article-list-widget-article-link__main__title">
+        <h3 className="article-link__title">
           <a
             href={`${props.viewArticleBaseUrl}${props.article.id}`}
-            className="reach-article-list-widget-article-link__main__title__a"
+            className="article-link__title__a"
           >
             {props.article?.title}
+            {/* {props.article?.title} */}
           </a>
         </h3>
 
-        <div className="reach-article-list-widget-article-link__main__meta">
+        <div>
           <ArticleMeta
             article={props.article}
             show={['date', 'views', 'feedback']}
@@ -55,15 +64,15 @@ const ArticleLink = (props: Props) => {
         </div>
 
         <p
-          className={`reach-article-list-widget-article-link__main__description five-liner`}
+          className={`article-link__description five-liner`}
         >
           {props.article.description}
         </p>
 
-        <div className="reach-article-list-widget-article-link__main__more">
+        <div className="article-link__more">
           <a
             href={`${props.viewArticleBaseUrl}${props.article.id}`}
-            className="reach-article-list-widget-article-link__main__more__a"
+            className="article-link__more__a"
           >
             Read More SYM
           </a>
