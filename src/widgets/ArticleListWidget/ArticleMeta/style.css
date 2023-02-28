@@ -1,7 +1,3 @@
-.article-meta__date {
-  color: var(--reach-foregroundcolor-3);
-  font-size: 12px;
-}
 .article-meta {
   display: grid;
   grid-auto-flow: column;

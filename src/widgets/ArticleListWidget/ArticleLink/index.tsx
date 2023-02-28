@@ -23,7 +23,7 @@ const ArticleLink = (props: Props) => {
   }, [props.article]);
 
   return (
-    <div className={`reach-article-list-widget-article-link ${props.outline && !props.backgroundFill ? "reach-article-list-widget-article-link--outline" :""} ${props.backgroundFill ? "reach-article-list-widget-article-link--background-fill" :""} ${props.fullWidthImage ? "reach-article-list-widget-article-link--full-width-image" :""}`}>
+    <div className={`reach-article-list-widget-article-link ${props.outline && !props.backgroundFill ? "reach-article-list-widget-article-link--outline" : ""} ${props.backgroundFill ? "reach-article-list-widget-article-link--background-fill" : ""} ${props.fullWidthImage ? "reach-article-list-widget-article-link--full-width-image" : ""}`}>
       {!props.hideImage && imageUrl && (
         <div
           className="reach-article-list-widget-article-link__image">
@@ -34,13 +34,20 @@ const ArticleLink = (props: Props) => {
         </div>
       )}
       <div className="reach-article-list-widget-article-link__main">
-        {getCategoryName(props.article, props.categoryMap) && (
+        {/* {getCategoryName(props.article, props.categoryMap) && (
           <div
             className="reach-article-list-widget-article-link__main__category"
           >
             {getCategoryName(props.article, props.categoryMap)}
           </div>
-        )}
+        )} */}
+        <div
+          className="reach-article-list-widget-article-link__main__timestamp small"
+        >
+          <div className="reach-article-list-widget-article-link__main__timestamp__created-on">Nov 29, 2022</div>
+          <div className="reach-article-list-widget-article-link__main__timestamp__seperator" />
+          <div className="reach-article-list-widget-article-link__main__timestamp__read-time">2 min</div>
+        </div>
         <h3 className="reach-article-list-widget-article-link__main__title">
           <a
             href={`${props.viewArticleBaseUrl}${props.article.id}`}
@@ -50,12 +57,12 @@ const ArticleLink = (props: Props) => {
           </a>
         </h3>
 
-        <div className="reach-article-list-widget-article-link__main__meta">
+        {/* <div className="reach-article-list-widget-article-link__main__meta">
           <ArticleMeta
             article={props.article}
             show={['date', 'views', 'feedback']}
           />
-        </div>
+        </div> */}
 
         <p
           className={`reach-article-list-widget-article-link__main__description five-liner`}
@@ -63,14 +70,11 @@ const ArticleLink = (props: Props) => {
           {props.article.description}
         </p>
 
-        {/* <div className="reach-article-list-widget-article-link__main__more">
-          <a
-            href={`${props.viewArticleBaseUrl}${props.article.id}`}
-            className="reach-article-list-widget-article-link__main__more__a"
-          >
-            Read More SYM
-          </a>
-        </div> */}
+        <div className="reach-article-list-widget-article-link__main__meta">
+          <div className="reach-article-list-widget-article-link__main__meta__views small">
+            {`${props.article?.views} ${props.article?.views === 1 ? 'view' : 'views'}`}
+          </div>
+        </div>
       </div>
     </div>
   );

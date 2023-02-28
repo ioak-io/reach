@@ -79,7 +79,7 @@
 
 .reach-article-list-widget-article-link__main__description {
   margin: 0;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   /* margin-bottom: 10px; */
 }
 
@@ -106,4 +106,34 @@
 
 .reach-dark .reach-article-list-widget-article-link--background-fill {
   background-color: var(--theme-black-400);
+}
+
+.reach-article-list-widget-article-link__main__timestamp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.reach-article-list-widget-article-link__main__timestamp__seperator {
+  height: 4px;
+  width: 4px;
+  border-radius: 10px;
+  background-color: var(--theme-black-900);
+  margin: 0 6px;
+}
+
+.reach-dark .reach-article-list-widget-article-link__main__timestamp__seperator {
+  background-color: var(--theme-white-50);
+}
+
+.reach-article-list-widget-article-link__main__meta {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.reach-article-list-widget-article-link__main__meta__views {
+
 }
