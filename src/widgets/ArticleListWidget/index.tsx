@@ -7,6 +7,7 @@ export interface ArticleListWidgetProps {
   hideImage?: boolean;
   fullWidthImage?: boolean;
   outline?: boolean;
+  backgroundFill?: boolean;
   articles?: Article[];
   categoryMap: any;
   viewArticleBaseUrl?: string;
@@ -20,7 +21,9 @@ const ArticleListWidget = (props: ArticleListWidgetProps) => {
         <ArticleLink
           key={item.id}
           hideImage={props.hideImage}
+          fullWidthImage={props.fullWidthImage}
           outline={props.outline}
+          backgroundFill={props.backgroundFill}
           article={item}
           categoryMap={props.categoryMap}
           viewArticleBaseUrl={props.viewArticleBaseUrl}
