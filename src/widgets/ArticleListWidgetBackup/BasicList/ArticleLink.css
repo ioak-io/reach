@@ -93,9 +93,9 @@
   color: var(--reach-foregroundcolor-1);
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: var(--reach-article-list-summary-font-size);
-  font-weight: var(--reach-article-list-summary-font-weight);
-  line-height: var(--reach-article-list-summary-line-height);
+  font-size: var(--reach-article-list-description-font-size);
+  font-weight: var(--reach-article-list-description-font-weight);
+  line-height: var(--reach-article-list-description-line-height);
 }
 
 .reach-basic-list-article-link__main__more {

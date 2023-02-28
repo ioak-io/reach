@@ -5,6 +5,8 @@ import './style.css';
 
 export interface ArticleListWidgetProps {
   hideImage?: boolean;
+  fullWidthImage?: boolean;
+  outline?: boolean;
   articles?: Article[];
   categoryMap: any;
   viewArticleBaseUrl?: string;
@@ -18,6 +20,7 @@ const ArticleListWidget = (props: ArticleListWidgetProps) => {
         <ArticleLink
           key={item.id}
           hideImage={props.hideImage}
+          outline={props.outline}
           article={item}
           categoryMap={props.categoryMap}
           viewArticleBaseUrl={props.viewArticleBaseUrl}

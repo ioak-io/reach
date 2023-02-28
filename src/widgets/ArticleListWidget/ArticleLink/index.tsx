@@ -8,6 +8,8 @@ interface Props {
   article: Article;
   categoryMap: any;
   hideImage?: boolean;
+  fullWidthImage?: boolean;
+  outline?: boolean;
   viewArticleBaseUrl?: string;
   onArticleClick?: any;
 }
@@ -20,7 +22,7 @@ const ArticleLink = (props: Props) => {
   }, [props.article]);
 
   return (
-    <div className="reach-article-list-widget-article-link">
+    <div className={`reach-article-list-widget-article-link ${props.outline ? "reach-article-list-widget-article-link--outline" :""} ${props.fullWidthImage ? "reach-article-list-widget-article-link--full-width-image" :""}`}>
       {!props.hideImage && imageUrl && (
         <div
           className="reach-article-list-widget-article-link__image">
@@ -60,14 +62,14 @@ const ArticleLink = (props: Props) => {
           {props.article.description}
         </p>
 
-        <div className="reach-article-list-widget-article-link__main__more">
+        {/* <div className="reach-article-list-widget-article-link__main__more">
           <a
             href={`${props.viewArticleBaseUrl}${props.article.id}`}
             className="reach-article-list-widget-article-link__main__more__a"
           >
             Read More SYM
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
