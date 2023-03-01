@@ -17,8 +17,8 @@ export default {
 const Template: Story<ArticleListWidgetProps> = (args: ArticleListWidgetProps) => <ArticleListWidget {...args} />;
 
 // Reuse that template for creating different stories
-export const DefaultArticleListWidget = Template.bind({});
-DefaultArticleListWidget.args = {
+export const Demo = Template.bind({});
+Demo.args = {
   articles: articles,
   hideImage: false,
   viewArticleBaseUrl: "#/"

@@ -72,7 +72,7 @@ const ArticleLink = (props: Props) => {
 
         <div className="reach-article-list-widget-article-link__main__meta">
           <div className="reach-article-list-widget-article-link__main__meta__views small">
-            {`${props.article?.views} ${props.article?.views === 1 ? 'view' : 'views'}`}
+            {`${props.article?.views} ${props.article?.views === 1 ? 'comment' : 'comments'}`}
           </div>
         </div>
       </div>
