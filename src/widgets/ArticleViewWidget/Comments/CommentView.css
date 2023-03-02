@@ -1,7 +1,7 @@
 .reach-article-view-widget-comment-view__meta {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .reach-article-view-widget-comment-view__meta__left {
@@ -28,4 +28,9 @@
 
 .reach-dark .reach-article-view-widget-comment-view__meta__right__bottom__seperator {
     background-color: var(--theme-white-50);
+}
+
+.reach-article-view-widget-comment-view__description {
+    padding-left: 48px;
+    padding-top: 4px;
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Avatar from '../../../components/Avatar';
 import { Comment } from '../../../types/CommentType';
 import { getUser, User, UserMap } from '../../../types/UserType';
 import './CommentView.css';
@@ -20,7 +21,7 @@ const CommentView = (props: CommentViewProps) => {
     <div className="reach-article-view-widget-comment-view">
       <div className="reach-article-view-widget-comment-view__meta">
         <div className="reach-article-view-widget-comment-view__meta__left">
-          <img src={user?.avatarUrl} />
+          <Avatar user={user} />
         </div>
         <div className="reach-article-view-widget-comment-view__meta__right small">
           <div className="reach-article-view-widget-comment-view__meta__right__top">
@@ -28,8 +29,6 @@ const CommentView = (props: CommentViewProps) => {
           </div>
           <div className="reach-article-view-widget-comment-view__meta__right__bottom">
             <div className="reach-article-view-widget-comment-view__meta__right__bottom__created-on">Nov 29, 2022</div>
-            <div className="reach-article-view-widget-comment-view__meta__right__bottom__seperator" />
-            <div className="reach-article-view-widget-comment-view__meta__right__bottom__read-time">2 min</div>
           </div>
         </div>
       </div>

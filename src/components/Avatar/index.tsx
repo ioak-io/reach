@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { User } from '../../types/UserType';
+import { getAvatarUrl, User } from '../../types/UserType';
 import './style.css';
 
-export type CommentsProps = {
-  user: User;
+export type AvatarProps = {
+  user?: User;
 }
 
-const Comments = (props: CommentsProps) => {
+const Avatar = (props: AvatarProps) => {
+  const [avatarUrl, setAvatarUrl] = useState('');
+
+  useEffect(() => {
+    setAvatarUrl(getAvatarUrl(props.user));
+  }, [props.user]);
 
   return (
     <div className="reach-avatar">
-      <img className="reach-avatar__img" src={props.user.avatarUrl} />
+      <img src={avatarUrl} />
     </div>
   );
 };
 
-export default Comments;
+export default Avatar;
