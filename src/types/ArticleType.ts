@@ -8,10 +8,11 @@ export type Article = {
   views: number;
   helpful: number;
   notHelpful: number;
+  createdBy: string;
+  updatedBy: string;
   createdAt?: string;
   updatedAt?: string;
   categoryId?: string;
   categoryName?: string;
-  //   feedback?: Maybe<Array<Maybe<ArticleFeedback>>>;
   tags?: ArticleTag[];
 };

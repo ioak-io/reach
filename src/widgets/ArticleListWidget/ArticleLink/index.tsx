@@ -3,10 +3,13 @@ import './style.css';
 import { Article } from '../../../types/ArticleType';
 import ArticleMeta from '../ArticleMeta';
 import { getCategoryName } from '../../../utils/ArticleUtils';
+import { ArticleCategoryMap } from '../../../types/ArticleCategoryType';
+import { UserMap } from '../../../types/UserType';
 
 interface Props {
   article: Article;
-  categoryMap: any;
+  categoryMap: ArticleCategoryMap;
+  userMap: UserMap;
   hideImage?: boolean;
   fullWidthImage?: boolean;
   outline?: boolean;

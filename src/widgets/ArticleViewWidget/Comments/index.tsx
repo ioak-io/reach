@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Comment } from '../../../types/CommentType';
+import { User, UserMap } from '../../../types/UserType';
 import CommentView from './CommentView';
 import './style.css';
 
 export type CommentsProps = {
   comments: Comment[];
+  userMap: UserMap;
   outline?: boolean;
 }
 

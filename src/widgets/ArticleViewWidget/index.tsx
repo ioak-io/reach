@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from 'react';
+import { ArticleCategory, ArticleCategoryMap, toArticleCategoryMap } from '../../types/ArticleCategoryType';
 import { Article } from '../../types/ArticleType';
 import { Comment } from '../../types/CommentType';
+import { toUserMap, User, UserMap } from '../../types/UserType';
 import Comments from './Comments';
 import './style.css';
 
 export type ArticleViewWidgetProps = {
   article: Article;
   comments: Comment[];
-  categoryMap: any;
+  categories: ArticleCategory[];
+  users: User[];
   outline?: boolean;
 }
 
 const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
+  const [categoryMap, setCategoryMap] = useState<ArticleCategoryMap>({});
+  const [userMap, setUserMap] = useState<UserMap>({});
+
+  useEffect(() => {
+    setCategoryMap(toArticleCategoryMap(props.categories));
+  }, [props.categories]);
+
+  useEffect(() => {
+    setUserMap(toUserMap(props.users));
+  }, [props.users]);
 
   return (
     <div className={`reach-article-view-widget ${props.outline ? "reach-article-view-widget--outline" : ""}`}>
@@ -31,7 +44,7 @@ const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
           dangerouslySetInnerHTML={{ __html: props.article.description }}
         />
       </div>
-      <Comments comments={props.comments}/>
+      <Comments comments={props.comments} userMap={userMap} />
     </div>
   );
 };
