@@ -2,6 +2,7 @@ export type User = {
   id: string;
   firstName: string;
   lastName: string;
+  avatarUrl?: string;
   [key: string]: any;
 };
 
@@ -17,10 +18,23 @@ export const toUserMap = (users: User[]) => {
   return _userMap;
 }
 
-export const anonymousUser: User = {
+const anonymousAvatarUrl = "";
+
+const anonymousUser: User = {
   id: "anonymous",
   firstName: "Anonymous",
-  lastName: ""
+  lastName: "",
+  avatarUrl: anonymousAvatarUrl
+}
+
+export const getAvatarUrl = (user?: User, userMap?: UserMap) => {
+  if (!user?.avatarUrl && userMap && userMap["anonymous"]) {
+    return userMap["anonymous"].avatarUrl || anonymousAvatarUrl;
+  }
+  if (!user?.avatarUrl) {
+    return anonymousAvatarUrl;
+  }
+  return user.avatarUrl
 }
 
 export const getUser = (id: string, userMap: UserMap) => {

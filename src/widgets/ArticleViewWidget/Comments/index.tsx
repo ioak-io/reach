@@ -4,17 +4,17 @@ import { User, UserMap } from '../../../types/UserType';
 import CommentView from './CommentView';
 import './style.css';
 
-export type CommentsProps = {
+export type AvatarProps = {
   comments: Comment[];
   userMap: UserMap;
   outline?: boolean;
 }
 
-const Comments = (props: CommentsProps) => {
+const Avatar = (props: AvatarProps) => {
 
   return (
     <div className={`reach-article-view-widget-comment ${props.outline ? "reach-article-view-widget-comment--outline" : ""}`}>
-      <h2>Comments</h2>
+      <h2>Avatar</h2>
       <div>
         <textarea/>
       </div>
@@ -25,4 +25,4 @@ const Comments = (props: CommentsProps) => {
   );
 };
 
-export default Comments;
+export default Avatar;

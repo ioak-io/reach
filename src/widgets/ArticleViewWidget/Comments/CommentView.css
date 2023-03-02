@@ -1,0 +1,31 @@
+.reach-article-view-widget-comment-view__meta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.reach-article-view-widget-comment-view__meta__left {
+    height: 36px;
+    width: 36px;
+    border-radius: 36px;
+    margin-right: 12px;
+}
+
+.reach-article-view-widget-comment-view__meta__right__bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.reach-article-view-widget-comment-view__meta__right__bottom__seperator {
+    height: 4px;
+    width: 4px;
+    border-radius: 10px;
+    background-color: var(--theme-black-900);
+    margin: 0 6px;
+}
+
+.reach-dark .reach-article-view-widget-comment-view__meta__right__bottom__seperator {
+    background-color: var(--theme-white-50);
+}
