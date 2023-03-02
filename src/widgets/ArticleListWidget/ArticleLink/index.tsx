@@ -5,6 +5,7 @@ import ArticleMeta from '../ArticleMeta';
 import { getCategoryName } from '../../../utils/ArticleUtils';
 import { ArticleCategoryMap } from '../../../types/ArticleCategoryType';
 import { UserMap } from '../../../types/UserType';
+import Seperator from '../../../components/Seperator';
 
 interface Props {
   article: Article;
@@ -47,9 +48,9 @@ const ArticleLink = (props: Props) => {
         <div
           className="reach-article-list-widget-article-link__main__timestamp small"
         >
-          <div className="reach-article-list-widget-article-link__main__timestamp__created-on">Nov 29, 2022</div>
-          <div className="reach-article-list-widget-article-link__main__timestamp__seperator" />
-          <div className="reach-article-list-widget-article-link__main__timestamp__read-time">2 min</div>
+          <span className="reach-article-list-widget-article-link__main__timestamp__created-on">Nov 29, 2022</span>
+          <Seperator />
+          <span className="reach-article-list-widget-article-link__main__timestamp__read-time">2 min</span>
         </div>
         <h3 className="reach-article-list-widget-article-link__main__title">
           <a

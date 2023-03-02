@@ -1,0 +1,16 @@
+.reach-article-view-widget-metadata {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+
+.reach-article-view-widget-metadata__left {
+    margin-right: 12px;
+}
+
+.reach-article-view-widget-metadata__right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}

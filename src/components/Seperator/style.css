@@ -1,0 +1,11 @@
+.reach-seperator {
+    height: 2px;
+    width: 2px;
+    border-radius: 10px;
+    background-color: var(--theme-black-900);
+    margin: 0 6px;
+}
+
+.reach-dark .reach-seperator {
+    background-color: var(--theme-white-50);
+}

@@ -4,3 +4,13 @@
     border-radius: 50%;
     object-fit: cover;
 }
+
+.reach-avatar--size-large img {
+    width: 50px;
+    height: 50px;
+}
+
+.reach-avatar--size-xlarge img {
+    width: 150px;
+    height: 150px;
+}

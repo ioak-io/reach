@@ -4,6 +4,7 @@ import './style.css';
 
 export type AvatarProps = {
   user?: User;
+  size?: 'regular' | 'large' | 'xlarge';
 }
 
 const Avatar = (props: AvatarProps) => {
@@ -14,7 +15,7 @@ const Avatar = (props: AvatarProps) => {
   }, [props.user]);
 
   return (
-    <div className="reach-avatar">
+    <div className={`reach-avatar reach-avatar--size-${props.size || 'regular'}`}>
       <img src={avatarUrl} />
     </div>
   );

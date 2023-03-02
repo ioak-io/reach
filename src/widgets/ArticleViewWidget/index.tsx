@@ -4,6 +4,7 @@ import { Article } from '../../types/ArticleType';
 import { Comment } from '../../types/CommentType';
 import { toUserMap, User, UserMap } from '../../types/UserType';
 import Comments from './Comments';
+import MetadataView from './MetadataView';
 import './style.css';
 
 export type ArticleViewWidgetProps = {
@@ -29,13 +30,7 @@ const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
   return (
     <div className={`reach-article-view-widget ${props.outline ? "reach-article-view-widget--outline" : ""}`}>
       <div className="reach-article-view-widget__main">
-        <div
-          className="reach-article-view-widget__main__timestamp small"
-        >
-          <div className="reach-article-view-widget__main__timestamp__created-on">Nov 29, 2022</div>
-          <div className="reach-article-view-widget__main__timestamp__seperator" />
-          <div className="reach-article-view-widget__main__timestamp__read-time">2 min</div>
-        </div>
+        <MetadataView article={props.article} userMap={userMap} />
         <h1 className="reach-article-view-widget__main__title">
           {props.article?.title}
         </h1>

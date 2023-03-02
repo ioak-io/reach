@@ -1,17 +1,14 @@
-.reach-article-view-widget-comment-view__meta {
+.reach-article-view-widget-comment-metadata {
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
 }
 
-.reach-article-view-widget-comment-view__meta__left {
-    height: 36px;
-    width: 36px;
-    border-radius: 36px;
+.reach-article-view-widget-comment-metadata__left {
     margin-right: 12px;
 }
 
-.reach-article-view-widget-comment-view__meta__right__bottom {
+.reach-article-view-widget-comment-metadata__right__bottom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
