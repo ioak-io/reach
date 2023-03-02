@@ -21,5 +21,5 @@ export const Demo = Template.bind({});
 Demo.args = {
   articles: articles,
   hideImage: false,
-  viewArticleBaseUrl: "#/"
+  viewArticleBaseUrl: "/?path=/story/components-widgets-articleviewwidget--demo/"
 };
