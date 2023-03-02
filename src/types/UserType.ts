@@ -16,3 +16,17 @@ export const toUserMap = (users: User[]) => {
   })
   return _userMap;
 }
+
+export const anonymousUser: User = {
+  id: "anonymous",
+  firstName: "Anonymous",
+  lastName: ""
+}
+
+export const getUser = (id: string, userMap: UserMap) => {
+  if (!id || !userMap || !userMap[id]) {
+    return anonymousUser;
+  }
+
+  return userMap[id];
+}

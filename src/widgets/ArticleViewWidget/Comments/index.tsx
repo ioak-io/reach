@@ -19,7 +19,7 @@ const Comments = (props: CommentsProps) => {
         <textarea/>
       </div>
       <div className="reach-article-view-widget-comment__main">
-        {props.comments.map((comment) => <CommentView key={comment.id} comment={comment} />)}
+        {props.comments.map((comment) => <CommentView key={comment.id} comment={comment} userMap={props.userMap} />)}
       </div>
     </div>
   );

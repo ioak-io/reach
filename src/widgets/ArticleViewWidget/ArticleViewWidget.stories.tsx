@@ -5,6 +5,8 @@ import { useAddonState } from '@storybook/api';
 import { articles } from "../../components/Blog/ArticlesData";
 import ArticleViewWidget, { ArticleViewWidgetProps } from ".";
 import { comments } from "../../components/Blog/CommentsData";
+import { categories } from "../../components/Blog/CategoryData";
+import { users } from "../../components/Blog/UserData";
 
 export default {
   title: "Components/widgets/ArticleViewWidget",
@@ -21,5 +23,7 @@ const Template: Story<ArticleViewWidgetProps> = (args: ArticleViewWidgetProps) =
 export const Demo = Template.bind({});
 Demo.args = {
   article: articles[1],
-  comments: comments
+  comments: comments,
+  categories: categories,
+  users: users
 };
