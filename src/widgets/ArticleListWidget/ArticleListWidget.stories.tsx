@@ -4,6 +4,8 @@ import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
 import ArticleListWidget, { ArticleListWidgetProps } from ".";
 import { articles } from "../../components/Blog/ArticlesData";
+import { categories } from "../../components/Blog/CategoryData";
+import { users } from "../../components/Blog/UserData";
 
 export default {
   title: "Components/widgets/ArticleListWidget",
@@ -20,6 +22,8 @@ const Template: Story<ArticleListWidgetProps> = (args: ArticleListWidgetProps) =
 export const Demo = Template.bind({});
 Demo.args = {
   articles: articles,
+  categories: categories,
+  users: users,
   hideImage: false,
   viewArticleBaseUrl: "/?path=/story/components-widgets-articleviewwidget--demo/"
 };
