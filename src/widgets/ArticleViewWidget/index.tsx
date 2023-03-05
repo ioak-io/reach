@@ -3,13 +3,11 @@ import { ArticleCategory, ArticleCategoryMap, toArticleCategoryMap } from '../..
 import { Article } from '../../types/ArticleType';
 import { Comment } from '../../types/CommentType';
 import { toUserMap, User, UserMap } from '../../types/UserType';
-import Comments from './Comments';
 import MetadataView from './MetadataView';
 import './style.css';
 
 export type ArticleViewWidgetProps = {
   article: Article;
-  comments: Comment[];
   categories: ArticleCategory[];
   users: User[];
   outline?: boolean;
@@ -39,7 +37,6 @@ const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
           dangerouslySetInnerHTML={{ __html: props.article.description }}
         />
       </div>
-      <Comments comments={props.comments} userMap={userMap} />
     </div>
   );
 };

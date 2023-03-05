@@ -6,6 +6,7 @@ import { getCategoryName } from '../../../utils/ArticleUtils';
 import { ArticleCategoryMap } from '../../../types/ArticleCategoryType';
 import { UserMap } from '../../../types/UserType';
 import Seperator from '../../../components/Seperator';
+import { htmlToText } from '../../../utils/TextUtils';
 
 interface Props {
   article: Article;
@@ -71,7 +72,7 @@ const ArticleLink = (props: Props) => {
         <p
           className={`reach-article-list-widget-article-link__main__description five-liner`}
         >
-          {props.article.description}
+          {htmlToText(props.article.description)}
         </p>
 
         <div className="reach-article-list-widget-article-link__main__meta">

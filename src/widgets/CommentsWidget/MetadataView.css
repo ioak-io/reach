@@ -1,14 +1,14 @@
-.reach-article-view-widget-comment-metadata {
+.reach-comments-widget-metadata {
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
 }
 
-.reach-article-view-widget-comment-metadata__left {
+.reach-comments-widget-metadata__left {
     margin-right: 12px;
 }
 
-.reach-article-view-widget-comment-metadata__right__bottom {
+.reach-comments-widget-metadata__right__bottom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,5 +17,5 @@
 
 .reach-article-view-widget-comment-view__description {
     padding-left: 48px;
-    padding-top: 4px;
+    /* padding-top: 40px; */
 }
