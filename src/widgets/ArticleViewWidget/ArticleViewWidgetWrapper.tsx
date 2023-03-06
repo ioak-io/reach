@@ -5,6 +5,8 @@ import { Article } from '../../types/ArticleType';
 import { toUserMap, User, UserMap } from '../../types/UserType';
 import ArticleViewBodyChildWidget from './children/ArticleViewBodyChildWidget';
 import ArticleViewMetadataChildWidget from './children/ArticleViewMetadataChildWidget';
+import ArticleViewTagsChildWidget from './children/ArticleViewTagsChildWidget';
+import ArticleViewTitleChildWidget from './children/ArticleViewTitleChildWidget';
 import './style.css';
 
 export type ArticleViewWidgetWrapperProps = {
@@ -18,8 +20,10 @@ const ArticleViewWidgetWrapper = (props: ArticleViewWidgetWrapperProps) => {
 
   return (
     <ArticleViewWidget article={props.article} categories={props.categories} users={props.users}>
-      <ArticleViewBodyChildWidget article={props.article} />
-      <ArticleViewBodyChildWidget article={props.article} />
+      <ArticleViewMetadataChildWidget key="metadata" />
+      <ArticleViewTitleChildWidget key="title" />
+      <ArticleViewBodyChildWidget key="body" />
+      <ArticleViewTagsChildWidget key="body" />
     </ArticleViewWidget>
   );
 };

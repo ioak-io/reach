@@ -3,7 +3,8 @@ import { Article } from '../../../../types/ArticleType';
 import './style.css';
 
 export type ArticleViewTitleChildWidgetProps = {
-  article: Article;
+  [key: string]: any;
+  // article: Article;
 }
 
 const ArticleViewTitleChildWidget = (props: ArticleViewTitleChildWidgetProps) => {
