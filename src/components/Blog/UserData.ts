@@ -5,7 +5,8 @@ export const users: User[] = [
         id: "1",
         firstName: "Gene",
         lastName: "Tierney",
-        avatarUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        avatarUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        aboutDetail: "vel curae cursus eleifend urna dignissim justo dapibus. facilisis venenatis ultrices amet porttitor augue maecenas integer cursus. nunc hendrerit euismod pulvinar quisque orci cursus augue orci class id curae"
     },
     {
         id: "2",

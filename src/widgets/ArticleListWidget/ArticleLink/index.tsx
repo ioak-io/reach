@@ -51,7 +51,7 @@ const ArticleLink = (props: Props) => {
         >
           <span className="reach-article-list-widget-article-link__main__timestamp__created-on">Nov 29, 2022</span>
           <Seperator />
-          <span className="reach-article-list-widget-article-link__main__timestamp__read-time">2 min</span>
+          <span className="reach-article-list-widget-article-link__main__timestamp__read-time">2 mins read</span>
         </div>
         <h3 className="reach-article-list-widget-article-link__main__title">
           <a

@@ -30,7 +30,7 @@ const ArticleViewMetadataChildWidget = (props: ArticleViewMetadataChildWidgetPro
           </span>
           <Seperator />
           <span>
-            2 mins
+            2 mins read
           </span>
         </div>
       </div>
