@@ -19,15 +19,17 @@ const MetadataView = (props: MetadataViewProps) => {
   }, [props.userMap, props.article]);
 
   return (
-      <div className="reach-article-view-widget-metadata">
-        <div className="reach-article-view-widget-metadata__left">
-          <Avatar user={user} size="large" />
-        </div>
-        <div className="reach-article-view-widget-metadata__right">
+    <div className="reach-article-view-widget-metadata">
+      <div className="reach-article-view-widget-metadata__left">
+        <Avatar user={user} size="large" />
+      </div>
+      <div className="reach-article-view-widget-metadata__right">
+        <div className="reach-article-view-widget-metadata__right__top">
           <span>
             {user?.firstName} {user?.lastName}
           </span>
-          <Seperator />
+        </div>
+        <div className="reach-article-view-widget-metadata__right__bottom">
           <span>
             Nov 29, 2022
           </span>
@@ -37,6 +39,7 @@ const MetadataView = (props: MetadataViewProps) => {
           </span>
         </div>
       </div>
+    </div>
   );
 };
 

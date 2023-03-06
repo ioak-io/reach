@@ -10,7 +10,24 @@
 
 .reach-article-view-widget-metadata__right {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.reach-article-view-widget-metadata__right__bottom {
+    display: flex;
     align-items: center;
+    color: var(--theme-black-50);
+    font-size: 14px;
+}
+.reach-dark .reach-article-view-widget-metadata__right__bottom {
+    color: var(--theme-white-700);
+}
+
+.reach-article-view-widget-metadata__right__bottom .reach-seperator {
+    background-color: var(--theme-black-50);
+}
+.reach-dark .reach-article-view-widget-metadata__right__bottom .reach-seperator {
+    background-color: var(--theme-white-700);
 }
