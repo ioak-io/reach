@@ -14,5 +14,5 @@ export type Article = {
   updatedAt?: string;
   categoryId?: string;
   categoryName?: string;
-  tags?: ArticleTag[];
+  tags?: string[];
 };

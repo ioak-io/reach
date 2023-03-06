@@ -1,42 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactChildren, ReactNode, useEffect, useState } from 'react';
 import { ArticleCategory, ArticleCategoryMap, toArticleCategoryMap } from '../../types/ArticleCategoryType';
 import { Article } from '../../types/ArticleType';
-import { Comment } from '../../types/CommentType';
 import { toUserMap, User, UserMap } from '../../types/UserType';
-import MetadataView from './MetadataView';
 import './style.css';
 
 export type ArticleViewWidgetProps = {
   article: Article;
   categories: ArticleCategory[];
   users: User[];
-  outline?: boolean;
+  children?: ReactNode | ReactNode[];
 }
 
 const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
-  const [categoryMap, setCategoryMap] = useState<ArticleCategoryMap>({});
-  const [userMap, setUserMap] = useState<UserMap>({});
+
+  const [childWidgets, setChildWidgets] = useState<React.ReactNode[]>([]);
 
   useEffect(() => {
-    setCategoryMap(toArticleCategoryMap(props.categories));
-  }, [props.categories]);
-
-  useEffect(() => {
-    setUserMap(toUserMap(props.users));
-  }, [props.users]);
+      const _childWidgets: React.ReactNode[] = [];
+      console.log("++++++++++", props.children, typeof props.children);
+  }, [props.children]);
 
   return (
-    <div className={`reach-article-view-widget ${props.outline ? "reach-article-view-widget--outline" : ""}`}>
-      <div className="reach-article-view-widget__main">
-        <MetadataView article={props.article} userMap={userMap} />
-        <h1 className="reach-article-view-widget__main__title">
-          {props.article?.title}
-        </h1>
-        <p
-          className="reach-article-view-widget__main__description"
-          dangerouslySetInnerHTML={{ __html: props.article.description }}
-        />
-      </div>
+    <div className="reach-article-view-widget">
+      {props.children}
     </div>
   );
 };
