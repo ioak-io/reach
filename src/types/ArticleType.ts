@@ -4,6 +4,7 @@ import { ArticleTag } from './ArticleTag';
 export type Article = {
   id: string;
   title: string;
+  summary?: string;
   description: string;
   views: number;
   helpful: number;

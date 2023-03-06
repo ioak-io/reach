@@ -72,7 +72,7 @@ const ArticleLink = (props: Props) => {
         <p
           className={`reach-article-list-widget-article-link__main__description five-liner`}
         >
-          {htmlToText(props.article.description)}
+          {props.article.summary || htmlToText(props.article.description)}
         </p>
 
         <div className="reach-article-list-widget-article-link__main__meta">

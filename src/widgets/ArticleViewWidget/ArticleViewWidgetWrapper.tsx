@@ -5,6 +5,7 @@ import { Article } from '../../types/ArticleType';
 import { toUserMap, User, UserMap } from '../../types/UserType';
 import ArticleViewBodyChildWidget from './children/ArticleViewBodyChildWidget';
 import ArticleViewMetadataChildWidget from './children/ArticleViewMetadataChildWidget';
+import ArticleViewSummaryChildWidget from './children/ArticleViewSummaryChildWidget';
 import ArticleViewTagsChildWidget from './children/ArticleViewTagsChildWidget';
 import ArticleViewTitleChildWidget from './children/ArticleViewTitleChildWidget';
 import './style.css';
@@ -22,9 +23,9 @@ const ArticleViewWidgetWrapper = (props: ArticleViewWidgetWrapperProps) => {
     <ArticleViewWidget article={props.article} categories={props.categories} users={props.users}>
       <ArticleViewMetadataChildWidget key="metadata" />
       <ArticleViewTitleChildWidget key="title" />
-      <ArticleViewTagsChildWidget key="tags" />
+      <ArticleViewSummaryChildWidget key="summary" />
       <ArticleViewBodyChildWidget key="body" />
-      <ArticleViewTagsChildWidget key="tags-2" />
+      <ArticleViewTagsChildWidget key="tags" />
     </ArticleViewWidget>
   );
 };

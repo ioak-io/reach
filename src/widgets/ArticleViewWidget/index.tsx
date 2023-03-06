@@ -40,6 +40,7 @@ const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
       let _child = child;
       if ([
         "ArticleViewTitleChildWidget",
+        "ArticleViewSummaryChildWidget",
         "ArticleViewBodyChildWidget",
         "ArticleViewMetadataChildWidget",
         "ArticleViewTagsChildWidget"
