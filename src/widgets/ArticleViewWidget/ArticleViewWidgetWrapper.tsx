@@ -22,8 +22,8 @@ const ArticleViewWidgetWrapper = (props: ArticleViewWidgetWrapperProps) => {
     <ArticleViewWidget article={props.article} categories={props.categories} users={props.users}>
       <ArticleViewMetadataChildWidget key="metadata" />
       <ArticleViewTitleChildWidget key="title" />
+      <ArticleViewTagsChildWidget key="tags" />
       <ArticleViewBodyChildWidget key="body" />
-      <ArticleViewTagsChildWidget key="body" />
     </ArticleViewWidget>
   );
 };

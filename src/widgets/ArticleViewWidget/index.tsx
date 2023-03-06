@@ -36,8 +36,17 @@ const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
 
   useEffect(() => {
     const _childWidgets: ReactNode[] = [];
-    React.Children.forEach(props.children, (child: ReactElement) => {
-      _childWidgets.push(React.cloneElement(child, { article: props.article, categoryMap, userMap, user }));
+    React.Children.forEach(props.children, (child: any) => {
+      let _child = child;
+      if ([
+        "ArticleViewTitleChildWidget",
+        "ArticleViewBodyChildWidget",
+        "ArticleViewMetadataChildWidget",
+        "ArticleViewTagsChildWidget"
+      ].includes(child.type.name)) {
+        _child = React.cloneElement(child, { article: props.article, categoryMap, userMap, user });
+      }
+      _childWidgets.push(_child);
     })
 
     setChildWidgets(_childWidgets);
