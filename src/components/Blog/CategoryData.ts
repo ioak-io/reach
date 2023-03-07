@@ -9,7 +9,7 @@ export const categories: ArticleCategory[] = [
     {
         id: "2",
         name: "Fashion",
-        picture: "https://images.unsplash.com/photo-1596382941360-171eadddbc20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+        picture: "https://images.unsplash.com/photo-1622220835869-5e3e9bc89136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
     },
     {
         id: "3",
@@ -33,6 +33,6 @@ export const categories: ArticleCategory[] = [
     {
         id: "7",
         name: "Classical Music",
-        picture: "https://images.unsplash.com/photo-1477233534935-f5e6fe7c1159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        picture: "https://images.unsplash.com/photo-1519139270028-ab664cf42264?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     }
 ]

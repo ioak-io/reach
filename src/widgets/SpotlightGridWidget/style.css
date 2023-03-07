@@ -1,0 +1,6 @@
+.reach-spotlight-grid-widget {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    row-gap: 12px;
+    column-gap: 12px;
+}
