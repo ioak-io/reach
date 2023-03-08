@@ -12,6 +12,7 @@
 .reach-author-profile-widget--horizontal {
     flex-direction: row;
     width: 100%;
+    max-width: 100%;
 }
 
 .reach-author-profile-widget--horizontal .reach-author-profile-widget__text {

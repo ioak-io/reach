@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ArticleListWidget, { ArticleListWidgetProps } from '.';
+import ArticleListWidget, { ArticleListWidgetBackupProps } from '.';
 import { articles } from '../../components/Blog/ArticlesData';
 
-const ArticleListWidgetWrapper = (props: ArticleListWidgetProps) => {
+const ArticleListWidgetWrapper = (props: ArticleListWidgetBackupProps) => {
   return (
     <ArticleListWidget
       variant={props.variant}

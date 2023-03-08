@@ -7,14 +7,15 @@ import './SpotlightView.css';
 
 export type SpotlightViewProps = {
   spotlight: SpotlightDataType;
+  fixedLabel?: boolean;
 }
 
 const SpotlightView = (props: SpotlightViewProps) => {
   return (
-    <a className="reach-spotlight-grid-widget-category-view">
+    <a className={`reach-spotlight-grid-widget-category-view ${props.fixedLabel ? "reach-spotlight-grid-widget-category-view--fixed-label" : ""}`}>
       {props.spotlight.image && <img src={props.spotlight.image} />}
       {!props.spotlight.image && props.spotlight.text}
-      <div className="reach-spotlight-grid-widget-category-view__text">{props.spotlight.text}</div>
+      {props.spotlight.image && <div className="reach-spotlight-grid-widget-category-view__text">{props.spotlight.text}</div>}
     </a>
   );
 };

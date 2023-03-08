@@ -51,7 +51,7 @@ const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
     })
 
     setChildWidgets(_childWidgets);
-  }, [props.children, props.article, categoryMap, userMap]);
+  }, [props.children, props.article, categoryMap, userMap, user]);
 
   return (
     <div className="reach-article-view-widget">
