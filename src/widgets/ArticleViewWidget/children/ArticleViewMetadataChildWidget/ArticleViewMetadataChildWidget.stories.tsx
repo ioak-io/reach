@@ -18,5 +18,6 @@ const Template: Story<ArticleViewMetadataChildWidgetProps> = (args: ArticleViewM
 // Reuse that template for creating different stories
 export const Demo = Template.bind({});
 Demo.args = {
-  article: articles[1]
+  article: articles[1],
+  children: "Custom content"
 };

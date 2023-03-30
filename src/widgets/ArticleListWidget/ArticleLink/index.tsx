@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
-import { Article } from '../../../types/ArticleType';
+import { Article, getFeaturedImage } from '../../../types/ArticleType';
 import ArticleMeta from '../ArticleMeta';
 import { getCategoryName } from '../../../utils/ArticleUtils';
 import { ArticleCategoryMap } from '../../../types/ArticleCategoryType';
@@ -24,7 +24,7 @@ const ArticleLink = (props: Props) => {
   const [imageUrl, setImageUrl] = useState<any>(null);
 
   useEffect(() => {
-    setImageUrl("https://images.unsplash.com/photo-1519748771451-a94c596fad67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    setImageUrl(getFeaturedImage(props.article));
   }, [props.article]);
 
   return (

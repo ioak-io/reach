@@ -1,7 +1,13 @@
-.reach-article-view-metadata-child-widget {
+.reach-article-view-metadata-child-widget,
+.reach-article-view-metadata-child-widget-main {
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
+    align-items: center;
+}
+
+.reach-article-view-metadata-child-widget {
+    justify-content: space-between;
 }
 
 .reach-article-view-metadata-child-widget__left {

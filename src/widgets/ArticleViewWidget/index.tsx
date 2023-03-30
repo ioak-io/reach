@@ -2,6 +2,7 @@ import React, { ReactChildren, ReactElement, ReactNode, useEffect, useState } fr
 import { ArticleCategory, ArticleCategoryMap, toArticleCategoryMap } from '../../types/ArticleCategoryType';
 import { Article } from '../../types/ArticleType';
 import { getUser, toUserMap, User, UserMap } from '../../types/UserType';
+import ArticleViewBodyChildWidget from './children/ArticleViewBodyChildWidget';
 import './style.css';
 
 export type ArticleViewWidgetProps = {
@@ -36,19 +37,22 @@ const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
 
   useEffect(() => {
     const _childWidgets: ReactNode[] = [];
-    React.Children.forEach(props.children, (child: any) => {
-      let _child = child;
-      if ([
-        "ArticleViewTitleChildWidget",
-        "ArticleViewSummaryChildWidget",
-        "ArticleViewBodyChildWidget",
-        "ArticleViewMetadataChildWidget",
-        "ArticleViewTagsChildWidget"
-      ].includes(child.type.name)) {
-        _child = React.cloneElement(child, { article: props.article, categoryMap, userMap, user });
-      }
-      _childWidgets.push(_child);
-    })
+    if (props.article) {
+      React.Children.forEach(props.children, (child: any) => {
+        let _child = child;
+        console.log(child, child.type.displayName);
+        if ([
+          "ArticleViewTitleChildWidget",
+          "ArticleViewSummaryChildWidget",
+          "ArticleViewBodyChildWidget",
+          "ArticleViewMetadataChildWidget",
+          "ArticleViewTagsChildWidget"
+        ].includes(child.type.displayName)) {
+          _child = React.cloneElement(child, { article: props.article, categoryMap, userMap, user });
+        }
+        _childWidgets.push(_child);
+      })
+    }
 
     setChildWidgets(_childWidgets);
   }, [props.children, props.article, categoryMap, userMap, user]);
