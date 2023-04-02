@@ -44,4 +44,6 @@ const ArticleViewMetadataChildWidget = (props: ArticleViewMetadataChildWidgetPro
   );
 };
 
+ArticleViewMetadataChildWidget.displayName = "ArticleViewMetadataChildWidget";
+
 export default ArticleViewMetadataChildWidget;

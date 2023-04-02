@@ -40,7 +40,6 @@ const ArticleViewWidget = (props: ArticleViewWidgetProps) => {
     if (props.article) {
       React.Children.forEach(props.children, (child: any) => {
         let _child = child;
-        console.log(child, child.type.displayName);
         if ([
           "ArticleViewTitleChildWidget",
           "ArticleViewSummaryChildWidget",

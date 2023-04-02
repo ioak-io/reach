@@ -17,4 +17,6 @@ const ArticleViewSummaryChildWidget = (props: ArticleViewSummaryChildWidgetProps
   );
 };
 
+ArticleViewSummaryChildWidget.displayName = "ArticleViewSummaryChildWidget";
+
 export default ArticleViewSummaryChildWidget;

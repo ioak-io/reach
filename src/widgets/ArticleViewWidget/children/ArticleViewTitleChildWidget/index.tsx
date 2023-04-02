@@ -15,4 +15,6 @@ const ArticleViewTitleChildWidget = (props: ArticleViewTitleChildWidgetProps) =>
   );
 };
 
+ArticleViewTitleChildWidget.displayName = "ArticleViewTitleChildWidget";
+
 export default ArticleViewTitleChildWidget;
