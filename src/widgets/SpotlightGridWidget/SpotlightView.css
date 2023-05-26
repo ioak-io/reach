@@ -2,7 +2,7 @@
     outline: none;
     box-shadow: none;
     border: none;
-    width: 250px;
+    width: 100%;
     height: 250px;
     position: relative;
 }
@@ -37,7 +37,7 @@ a.reach-spotlight-grid-widget-category-view:active {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    width: 250px;
+    width: 100%;
     height: 250px;
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@ a.reach-spotlight-grid-widget-category-view:active {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.6);
-    width: 250px;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;

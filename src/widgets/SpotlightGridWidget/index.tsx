@@ -7,13 +7,13 @@ import './style.css';
 export type SpotlightGridWidgetProps = {
   data: SpotlightDataType[];
   fixedLabel?: boolean;
+  onClick?: any;
 }
 
 const SpotlightGridWidget = (props: SpotlightGridWidgetProps) => {
-
   return (
     <div className="reach-spotlight-grid-widget">
-      {props.data.map((spotlight) => <SpotlightView key={spotlight.id} spotlight={spotlight} fixedLabel={props.fixedLabel} />)}
+      {props.data.map((spotlight) => <SpotlightView onClick={props.onClick} key={spotlight.id} spotlight={spotlight} fixedLabel={props.fixedLabel} />)}
     </div>
   );
 };
