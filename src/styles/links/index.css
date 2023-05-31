@@ -2,13 +2,20 @@ a {
   box-shadow: none;
   text-decoration: none;
   border: none;
+  border-bottom: 1px dotted transparent;
   color: inherit;
-  transition: color 250ms ease-in-out;
+  transition: color 175ms ease-in-out, border-color 175ms ease-in-out;
 }
 
 
 a:hover,
 a:active,
 a:focus {
-  color: var(--theme-primary-600);
+  border-color: var(--theme-white-100i);
+}
+
+.reach-dark a:hover,
+.reach-dark a:active,
+.reach-dark a:focus {
+  border-color: var(--theme-black-100i);
 }

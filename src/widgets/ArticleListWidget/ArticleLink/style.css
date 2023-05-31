@@ -57,6 +57,17 @@
   filter: brightness(1);
 }
 
+
+.reach-article-list-widget-article-link--full-width-image img {
+  height: 14.25rem;
+}
+
+@media (min-width: 768px) {
+  .reach-article-list-widget-article-link--full-width-image img {
+    height: 18.75rem;
+  }
+}
+
 /* .article-link__root--materialize .article-link__image img,
 .article-link__root--materialize .article-link__image img:hover {
   box-shadow: none;
