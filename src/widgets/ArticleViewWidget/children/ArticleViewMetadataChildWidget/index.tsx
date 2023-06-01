@@ -5,6 +5,7 @@ import './style.css';
 
 export type ArticleViewMetadataChildWidgetProps = {
   children?: any;
+  hideImage?: boolean;
   [key: string]: any;
   // article?: Article;
   // categories?: ArticleCategory[];
@@ -17,9 +18,9 @@ const ArticleViewMetadataChildWidget = (props: ArticleViewMetadataChildWidgetPro
   return (
     <div className="reach-article-view-metadata-child-widget">
       <div className="reach-article-view-metadata-child-widget-main">
-        <div className="reach-article-view-metadata-child-widget__left">
+        {!props.hideImage && <div className="reach-article-view-metadata-child-widget__left">
           <Avatar user={props.user} size="large" />
-        </div>
+        </div>}
         <div className="reach-article-view-metadata-child-widget__right">
           <div className="reach-article-view-metadata-child-widget__right__top">
             <span>
