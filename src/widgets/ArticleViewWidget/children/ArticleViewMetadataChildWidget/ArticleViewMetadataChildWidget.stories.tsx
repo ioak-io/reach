@@ -3,6 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import ArticleViewMetadataChildWidget, { ArticleViewMetadataChildWidgetProps } from ".";
 import { articles } from "../../../../components/Blog/ArticlesData";
+import { users } from '../../../../components/Blog/UserData'
 
 export default {
   title: "Components/widgets/ArticleViewWidget/ArticleViewMetadataChildWidget",
@@ -19,5 +20,6 @@ const Template: Story<ArticleViewMetadataChildWidgetProps> = (args: ArticleViewM
 export const Demo = Template.bind({});
 Demo.args = {
   article: articles[1],
-  children: "Custom content"
+  children: "Custom content",
+  user: users[0]
 };

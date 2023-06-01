@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Avatar from '../../../../components/Avatar';
 import Seperator from '../../../../components/Seperator';
 import './style.css';
+import { User } from '../../../../types/UserType';
 
 export type ArticleViewMetadataChildWidgetProps = {
   children?: any;
@@ -10,7 +11,7 @@ export type ArticleViewMetadataChildWidgetProps = {
   // article?: Article;
   // categories?: ArticleCategory[];
   // users?: User[];
-  // user?: User;
+  user?: User;
 }
 
 const ArticleViewMetadataChildWidget = (props: ArticleViewMetadataChildWidgetProps) => {
