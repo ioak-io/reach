@@ -8,6 +8,7 @@ import './style.css';
 export interface ArticleListWidgetProps {
   hideImage?: boolean;
   fullWidthImage?: boolean;
+  viewAsGrid?: boolean;
   outline?: boolean;
   backgroundFill?: boolean;
   articles?: Article[];
@@ -30,7 +31,7 @@ const ArticleListWidget = (props: ArticleListWidgetProps) => {
   }, [props.users]);
 
   return (
-    <div className="reach-article-list-widget">
+    <div className={`reach-article-list-widget ${props.viewAsGrid ? 'reach-article-list-widget--grid' : ''}`}>
       {props.articles?.map((item: Article) => (
         <ArticleLink
           key={item.id}
@@ -43,6 +44,7 @@ const ArticleListWidget = (props: ArticleListWidgetProps) => {
           userMap={userMap}
           viewArticleBaseUrl={props.viewArticleBaseUrl}
           onArticleClick={props.onArticleClick}
+          viewAsGrid={props.viewAsGrid}
         />
       ))}
     </div>

@@ -29,6 +29,7 @@
   display: flex;
   align-items: flex-start;
   max-width: 300px;
+  max-height: 300px;
 }
 
 @media (max-width: 767px) {
@@ -101,7 +102,7 @@
 
 .reach-article-list-widget-article-link__main__category {
   color: #dea112;
- }
+}
 
 .reach-article-list-widget-article-link--outline {
   border: 1px solid var(--theme-white-100);
@@ -133,6 +134,20 @@
   flex-wrap: wrap;
 }
 
-.reach-article-list-widget-article-link__main__meta__views {
+.reach-article-list-widget-article-link__main__meta__views {}
 
+.reach-article-list-widget-article-link--grid .reach-article-list-widget-article-link__image img {
+  height: 150px;
+}
+
+.reach-article-list-widget-article-link--grid .reach-article-list-widget-article-link__main__title {
+  font-size: 1.4rem;
+}
+
+.reach-article-list-widget-article-link--grid .reach-article-list-widget-article-link__main {
+  padding: 12px 0 0 0;
+}
+
+.reach-article-list-widget-article-link--grid {
+  align-content: flex-start;
 }

@@ -7,6 +7,7 @@ import * as CommentType from "./types/CommentType";
 import * as SpotlightDataType from "./types/SpotlightDataType";
 import * as ReachWidgetGroup from "./types/ReachWidgetGroup";
 import ArticleListWidget from './widgets/ArticleListWidget'
+import ArticleMinimalListWidget from './widgets/ArticleMinimalListWidget';
 import ArticleViewWidget from './widgets/ArticleViewWidget'
 import AuthorProfile from './widgets/AuthorProfile'
 import CommentsWidget from './widgets/CommentsWidget'
@@ -26,6 +27,7 @@ export {
     ReachWidgetGroup,
     SpotlightDataType,
     ArticleListWidget,
+    ArticleMinimalListWidget,
     ArticleViewBodyChildWidget, ArticleViewMetadataChildWidget, ArticleViewSummaryChildWidget, ArticleViewTagsChildWidget, ArticleViewTitleChildWidget, ArticleViewWidget,
     AuthorProfile,
     CommentsWidget,

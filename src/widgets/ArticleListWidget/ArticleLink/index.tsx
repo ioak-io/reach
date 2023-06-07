@@ -18,6 +18,7 @@ interface Props {
   backgroundFill?: boolean;
   viewArticleBaseUrl?: string;
   onArticleClick?: any;
+  viewAsGrid?: boolean;
 }
 
 const ArticleLink = (props: Props) => {
@@ -28,7 +29,7 @@ const ArticleLink = (props: Props) => {
   }, [props.article]);
 
   return (
-    <div className={`reach-article-list-widget-article-link ${props.outline && !props.backgroundFill ? "reach-article-list-widget-article-link--outline" : ""} ${props.backgroundFill ? "reach-article-list-widget-article-link--background-fill" : ""} ${props.fullWidthImage ? "reach-article-list-widget-article-link--full-width-image" : ""}`}>
+    <div className={`reach-article-list-widget-article-link ${props.outline && !props.backgroundFill ? "reach-article-list-widget-article-link--outline" : ""} ${props.backgroundFill ? "reach-article-list-widget-article-link--background-fill" : ""} ${(props.fullWidthImage || props.viewAsGrid) ? "reach-article-list-widget-article-link--full-width-image" : ""} ${props.viewAsGrid ? "reach-article-list-widget-article-link--grid" : ""}`}>
       {!props.hideImage && imageUrl && (
         <div
           className="reach-article-list-widget-article-link__image">
