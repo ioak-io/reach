@@ -38,19 +38,6 @@ const ArticleLink = (props: Props) => {
         </div>
       )}
       <div className="reach-article-grid-widget-article-link__main">
-        <h3 className="reach-article-grid-widget-article-link__main__title">
-          <a
-            href={`${props.viewArticleBaseUrl}${props.article.id}`}
-            className="reach-article-grid-widget-article-link__main__title__a"
-          >
-            {props.article?.title}
-          </a>
-        </h3>
-        <p
-          className={`reach-article-grid-widget-article-link__main__description`}
-        >
-          {(props.article.summary || htmlToText(props.article.description)).substring(0, 200).trim()}{(props.article.summary || htmlToText(props.article.description)).length > 200 ? '...' : ''}
-        </p>
         <div
           className="reach-article-grid-widget-article-link__main__timestamp small"
         >
@@ -58,6 +45,19 @@ const ArticleLink = (props: Props) => {
           <Seperator />
           <span className="reach-article-grid-widget-article-link__main__timestamp__read-time">2 mins read</span>
         </div>
+        <p className="reach-article-grid-widget-article-link__main__title">
+          <a
+            href={`${props.viewArticleBaseUrl}${props.article.id}`}
+            className="reach-article-grid-widget-article-link__main__title__a"
+          >
+            {props.article.title.substring(0, 50).trim()}{props.article.title.length > 50 ? '...' : ''}
+          </a>
+        </p>
+        <p
+          className={`reach-article-grid-widget-article-link__main__description`}
+        >
+          {(props.article.summary || htmlToText(props.article.description)).substring(0, 100).trim()}{(props.article.summary || htmlToText(props.article.description)).length > 100 ? '...' : ''}
+        </p>
       </div>
     </div>
   );
