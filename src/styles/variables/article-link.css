@@ -1,0 +1,12 @@
+* {
+    --reach-article-link-thumbnail-title-font-size: 20px;
+    --reach-article-link-thumbnail-title-font-weight: var(--reach-article-list-title-font-weight);
+    --reach-article-link-thumbnail-title-line-height: var(--reach-article-list-title-line-height);
+    --reach-article-link-thumbnail-summary-font-size: var(--reach-article-link-summary-title-font-size);
+    --reach-article-link-thumbnail-summary-font-weight: var(--reach-article-link-summary-title-font-weight);
+    --reach-article-link-thumbnail-summary-line-height: var(--reach-article-link-summary-title-line-height);
+    
+    --reach-article-link-spotlight-title-font-size: 18px;
+    --reach-article-link-spotlight-title-font-weight: var(--reach-article-list-title-font-weight);
+    --reach-article-link-spotlight-title-line-height: var(--reach-article-list-title-line-height);
+}

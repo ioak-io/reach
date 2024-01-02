@@ -1,0 +1,5 @@
+.reach-article-minimal-list-widget {
+  display: grid;
+  grid-auto-flow: row;
+  /* row-gap: 20px; */
+}
