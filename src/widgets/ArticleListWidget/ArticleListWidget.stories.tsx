@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Meta } from "@storybook/react/types-6-0";
-import { Story } from "@storybook/react";
-import { useAddonState } from '@storybook/api';
+import { Story, Meta } from "@storybook/react";
 import ArticleListWidget, { ArticleListWidgetProps } from ".";
 import { articles } from "../../components/Blog/ArticlesData";
 import { categories } from "../../components/Blog/CategoryData";
