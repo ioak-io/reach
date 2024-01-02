@@ -1,0 +1,19 @@
+.reach-article-grid-widget {
+  display: grid;
+  /* row-gap: 20px;
+  column-gap: 20px; */
+  row-gap: 0;
+  grid-gap: 1.5rem 1rem;
+}
+
+@media (min-width: 600px) {
+  .reach-article-grid-widget {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .reach-article-grid-widget {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -54,7 +54,7 @@ export function sort(
 }
 
 export function htmlToText(str?: string | null) {
-  if (!str) return false;
+  if (!str) return '';
   str = str.toString();
   return str.replace(/(<([^>]+)>)/gi, '');
 }

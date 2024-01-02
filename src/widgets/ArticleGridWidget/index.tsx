@@ -5,9 +5,8 @@ import { toUserMap, User, UserMap } from '../../types/UserType';
 import ArticleLink from './ArticleLink';
 import './style.css';
 
-export interface ArticleListWidgetProps {
+export interface ArticleGridWidgetProps {
   hideImage?: boolean;
-  fullWidthImage?: boolean;
   outline?: boolean;
   backgroundFill?: boolean;
   articles?: Article[];
@@ -17,7 +16,7 @@ export interface ArticleListWidgetProps {
   onArticleClick?: any;
 }
 
-const ArticleListWidget = (props: ArticleListWidgetProps) => {
+const ArticleGridWidget = (props: ArticleGridWidgetProps) => {
   const [categoryMap, setCategoryMap] = useState<ArticleCategoryMap>({});
   const [userMap, setUserMap] = useState<UserMap>({});
 
@@ -30,12 +29,11 @@ const ArticleListWidget = (props: ArticleListWidgetProps) => {
   }, [props.users]);
 
   return (
-    <div className='reach-article-list-widget'>
+    <div className='reach-article-grid-widget'>
       {props.articles?.map((item: Article) => (
         <ArticleLink
           key={item.id}
           hideImage={props.hideImage}
-          fullWidthImage={props.fullWidthImage}
           outline={props.outline}
           backgroundFill={props.backgroundFill}
           article={item}
@@ -49,4 +47,4 @@ const ArticleListWidget = (props: ArticleListWidgetProps) => {
   );
 };
 
-export default ArticleListWidget;
+export default ArticleGridWidget;
